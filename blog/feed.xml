@@ -4,7 +4,7 @@
         <title>Rajesh Detroja Blog</title>
         <link>https://rajesh-detroja.github.io/home/blog</link>
         <description>The best place to stay up-to-date with the latest Rajesh Detroja news and events.</description>
-        <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Dec 2017 06:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://rajesh-detroja.github.io/home/blog</link>
         </image>
         <copyright>Copyright © 2020 Your Name or Your Company Name</copyright>
+        <item>
+            <title><![CDATA[Introducing Docusaurus]]></title>
+            <link>https://rajesh-detroja.github.io/home/blog/2017/12/14/introducing-docusaurus.html</link>
+            <guid>https://rajesh-detroja.github.io/home/blog/2017/12/14/introducing-docusaurus.html</guid>
+            <pubDate>Thu, 14 Dec 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Lorem Ipsum...</p> ]]></description>
+        </item>
         <item>
             <title><![CDATA[New Version 1.0.0]]></title>
             <link>https://rajesh-detroja.github.io/home/blog/2017/10/24/new-version-1.0.0.html</link>
