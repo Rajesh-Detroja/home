@@ -69,7 +69,7 @@
 </ul>
 <p>The most basic type of <strong>R-objects</strong> is a <strong>vector</strong> object.</p>
 <blockquote>
-<p>A <strong>vector</strong> object can only contain <strong>data type of same class</strong>. Except, <strong><em>List</em></strong>.</p>
+<p>A <strong>vector</strong> object can only contain <strong>data type of the same class</strong>. Except, <strong><em>List</em></strong>.</p>
 </blockquote>
 <p>Empty vector can be created with the <strong><code>vector()</code></strong> function.</p>
 <pre><code class="hljs css language-r">vec <span class="token operator">&lt;-</span> vector<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -77,13 +77,192 @@
 <p>Here, <code>vec</code> is a <strong>variable</strong> and <code>vector()</code> is a function to create a <strong>vector</strong> object.</p>
 <h2><a class="anchor" aria-hidden="true" id="how-many-data-types-there-in-r"></a><a href="#how-many-data-types-there-in-r" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How many <code>Data Types</code> there in R?</h2>
 <p>There are <strong>6</strong> basic <strong>data types</strong> or <strong>atomic classes</strong> of objects:</p>
-<p><strong>1.</strong> Numeric</p>
-<p><strong>2.</strong> Integer</p>
-<p><strong>3.</strong> Complex</p>
-<p><strong>4.</strong> Character</p>
-<p><strong>5.</strong> Logical</p>
-<p><strong>6.</strong> Raw</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/home/docs/R/getting_started/comments"><span class="arrow-prev">← </span><span>Comments</span></a><a class="docs-next button" href="/home/docs/R/getting_started/variables"><span>Variables</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-the-data-types-in-r">What is the <code>Data Types</code> in R?</a></li><li><a href="#how-many-data-types-there-in-r">How many <code>Data Types</code> there in R?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Rajesh Detroja</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'351771359141773',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
+<h3><a class="anchor" aria-hidden="true" id="1-numeric"></a><a href="#1-numeric" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Numeric</strong></h3>
+<p>The most common data type in R is <strong>numeric</strong>. A variable or numeric series with or without decimals will be stored as numeric data.</p>
+<p><u><strong>Numeric series without decimals</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># numeric series without decimals</span>
+num_ser <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span>
+num_ser
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>num_ser<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">2</span> <span class="token number">6</span> <span class="token number">8</span>
+<span class="token string">"numeric"</span>
+</code></pre>
+<p><u><strong>Numeric series with decimals</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># numeric series with decimals</span>
+num_ser_dec <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">2.2</span><span class="token punctuation">,</span> <span class="token number">6.4</span><span class="token punctuation">,</span> <span class="token number">8.6</span><span class="token punctuation">)</span>
+num_ser_dec
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>num_ser_dec<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">2.2</span> <span class="token number">6.4</span> <span class="token number">8.6</span>
+<span class="token string">"numeric"</span>
+</code></pre>
+<blockquote>
+<p>The <strong><code>c()</code></strong> function can be used to <strong>create vectors</strong> of objects by concatenating things together.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="2-integer"></a><a href="#2-integer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>2. Integer</strong></h3>
+<p>An <strong>integer</strong> data types is a special case of numeric data. A variable or numeric series without decimals will be stored as integer data.</p>
+<p>Integer variable can be created with function <code>as.integer</code></p>
+<p><u><strong>Creating an integer variable</strong> </u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># creating integer variable</span>
+int_var <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+int_var
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>int_var<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">2</span>
+<span class="token string">"integer"</span>
+</code></pre>
+<p><u><strong>Creating an integer variable by appending an L suffix</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># creating an integer variable by appending an L suffix</span>
+int_var_L <span class="token operator">&lt;-</span> <span class="token number">2L</span>
+int_var_L
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>int_var_L<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">2</span>
+<span class="token string">"integer"</span>
+</code></pre>
+<blockquote>
+<p>If you explicitly want an <strong>integer</strong>, you need to specify the <strong>L suffix</strong>. So entering <strong>1</strong> in <strong>R</strong> gives you a <strong>numeric</strong> object; entering <strong>1L</strong> explicitly gives you an <strong>integer</strong> object.</p>
+</blockquote>
+<p><u><strong>Coerce a numeric decimals value into an integer variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># coerce a numeric decimals value into an integer variable</span>
+int_var_num <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token number">2.5</span><span class="token punctuation">)</span>
+int_var_num
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>int_var_num<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">2</span>
+<span class="token string">"integer"</span>
+</code></pre>
+<p><u><strong>Coerce a string of decimal value into an integer variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># coerce a string of decimal value into an integer variable</span>
+int_var_str <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token string">"2.5"</span><span class="token punctuation">)</span>
+int_var_str
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>int_var_str<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">2</span>
+<span class="token string">"integer"</span>
+</code></pre>
+<p><u><strong>Coerce a string of non-decimal value into an integer variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># coerce a string of non-decimal value into an integer variable</span>
+int_var_nd_str <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token string">"Rajesh"</span><span class="token punctuation">)</span>
+int_var_nd_str
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>int_var_nd_str<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r">Warning message<span class="token operator">:</span>
+NAs introduced by coercion
+<span class="token keyword">NA</span>
+<span class="token string">"integer"</span>
+</code></pre>
+<p><u><strong>Logical values into an integer variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># Logical values into an integer variable</span>
+int_var_true <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token boolean">TRUE</span><span class="token punctuation">)</span>
+int_var_true
+
+int_var_false <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token boolean">FALSE</span><span class="token punctuation">)</span>
+int_var_false
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>int_var_true<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>int_var_false<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">1</span>
+<span class="token number">0</span>
+<span class="token string">"integer"</span>
+<span class="token string">"integer"</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="3-complex"></a><a href="#3-complex" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>3. Complex</strong></h3>
+<p><strong>Complex</strong> data types in R is defined by an imaginary number, or i.</p>
+<p><u><strong>Creating an complex variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># creating an complex variable</span>
+comp_var <span class="token operator">&lt;-</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">0i</span>
+comp_var
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>comp_var<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span>
+<span class="token string">"complex"</span>
+</code></pre>
+<p><u><strong>Creating an complex variable with <code>c()</code> function</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># creating an complex variable with `c()` function</span>
+comp_var_c <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">+</span><span class="token number">4i</span><span class="token punctuation">)</span>
+comp_var_c
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>comp_var_c<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span> <span class="token number">2</span><span class="token operator">+</span><span class="token number">4i</span>
+<span class="token string">"complex"</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="4-character"></a><a href="#4-character" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>4. Character</strong></h3>
+<p>The data type <strong>character</strong> is used when storing <strong>string</strong> or <strong>text</strong> by using <strong><code>&quot;&quot;</code></strong></p>
+<p><u><strong>Creating an character variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># creating an character variable</span>
+char_var <span class="token operator">&lt;-</span> <span class="token string">"This is a string"</span>
+char_var
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>char_var<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token string">"This is a string"</span>
+<span class="token string">"character"</span>
+</code></pre>
+<p><u><strong>Everything inside <code>&quot;&quot;</code> will be considered as character</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># everything inside `""` will be considered as character</span>
+char_var_num <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"3.14"</span><span class="token punctuation">)</span>
+char_var_num
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>char_var<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token string">"3.14"</span>
+<span class="token string">"character"</span>
+</code></pre>
+<p><u><strong>Character + Numbers produces a whole character variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># character + numbers produces a whole character variable</span>
+char_var_c_n <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"string"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+char_var_c_n
+
+<span class="token comment"># checking data type of variable with "class" function</span>
+class<span class="token punctuation">(</span>char_var<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r"><span class="token string">"string"</span> <span class="token string">"2"</span> <span class="token string">"3.14"</span> <span class="token string">"6"</span>
+<span class="token string">"character"</span>
+</code></pre>
+<p><u><strong>Space within <code>&quot;&quot;</code> makes a different character variable</strong></u></p>
+<pre><code class="hljs css language-r"><span class="token comment"># space within `""` makes a different character variable</span>
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="5-logical"></a><a href="#5-logical" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>5. Logical</strong></h3>
+<h3><a class="anchor" aria-hidden="true" id="6-raw"></a><a href="#6-raw" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>6. Raw</strong></h3>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/home/docs/R/getting_started/comments"><span class="arrow-prev">← </span><span>Comments</span></a><a class="docs-next button" href="/home/docs/R/getting_started/variables"><span>Variables</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-the-data-types-in-r">What is the <code>Data Types</code> in R?</a></li><li><a href="#how-many-data-types-there-in-r">How many <code>Data Types</code> there in R?</a><ul class="toc-headings"><li><a href="#1-numeric"><strong>1. Numeric</strong></a></li><li><a href="#2-integer"><strong>2. Integer</strong></a></li><li><a href="#3-complex"><strong>3. Complex</strong></a></li><li><a href="#4-character"><strong>4. Character</strong></a></li><li><a href="#5-logical"><strong>5. Logical</strong></a></li><li><a href="#6-raw"><strong>6. Raw</strong></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Rajesh Detroja</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'351771359141773',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
                 </script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
@@ -97,7 +276,7 @@
                 });
               </script><script>
               var search = docsearch({
-                appId: 'app-id',
+                
                 apiKey: 'd1b1a1830f44802ffd2aa2b8ac790834',
                 indexName: 'rajesh-detroja',
                 inputSelector: '#search_input_react',
