@@ -72,7 +72,7 @@
 <tr><td style="text-align:center">var_name1.</td><td style="text-align:center">Valid</td><td style="text-align:center">Contains <strong>letters</strong>, <strong>numbers</strong>, <strong>dot</strong> and <strong>underscore</strong></td></tr>
 <tr><td style="text-align:center">.var_name,</td><td style="text-align:center">Valid</td><td style="text-align:center">Variable name can start with <strong>dot</strong></td></tr>
 <tr><td style="text-align:center">var.name</td><td style="text-align:center">Valid</td><td style="text-align:center"><strong>dot</strong> can be within variable name</td></tr>
-<tr><td style="text-align:center">var_name%</td><td style="text-align:center">Invalid</td><td style="text-align:center">Contains <strong>character <code>%</code></strong>, which is not allowed</td></tr>
+<tr><td style="text-align:center">var_name%</td><td style="text-align:center">Invalid</td><td style="text-align:center">Contains <strong>character</strong> <code>%</code>, which is not allowed</td></tr>
 <tr><td style="text-align:center">1var_name</td><td style="text-align:center">Invalid</td><td style="text-align:center">Starts with a <strong>number</strong>, which is not allowed</td></tr>
 <tr><td style="text-align:center">.1var_name</td><td style="text-align:center">Invalid</td><td style="text-align:center"><strong>Number</strong> should not followed by starting <strong>dot</strong></td></tr>
 <tr><td style="text-align:center">_var_name</td><td style="text-align:center">Invalid</td><td style="text-align:center">Starts with <strong>underscore</strong>, which is not allowed</td></tr>
@@ -86,7 +86,7 @@
 <p><u><strong>Reserved words in R programming</strong></u></p>
 <p><strong><code>if</code> <code>else</code> <code>repeat</code> <code>while</code> <code>function</code> <code>for</code> <code>in</code> <code>next</code> <code>break</code></strong></p>
 <p><strong><code>TRUE</code> <code>FALSE</code> <code>NULL</code> <code>Inf</code> <code>NaN</code> <code>NA</code> <code>NA_integer_</code> <code>NA_real_</code> <code>NA_complex_</code> <code>NA_character_</code></strong> etc.</p>
-<p>The list of reserved words can be viewed by typing <strong><code>help(reserved)</code> or <code>?reserved</code></strong></p>
+<p>The list of reserved words can be viewed by typing <code>help(reserved)</code> or <code>?reserved</code></p>
 <pre><code class="hljs css language-r"><span class="token comment"># view the list of reserved words</span>
 ?reserved
 </code></pre>
@@ -96,7 +96,7 @@
 <p><code>Inf</code> is for “Infinity”, for example when <strong>1</strong> is divided by <strong>0</strong></p>
 <p><code>NaN</code> is for “Not a Number”, for example when <strong>0</strong> is divided by <strong>0</strong></p>
 <p><code>NA</code> stands for “Not Available” and is used to represent missing values.</p>
-<p><u><strong>Note:</strong></u> Function <strong><code>help()</code></strong> or <strong>?</strong> is used to view a manual for in-built R functions.</p>
+<p><u><strong>Note:</strong></u> Function <code>help()</code> or <code>?</code> is used to view a manual for in-built R functions.</p>
 <h2><a class="anchor" aria-hidden="true" id="how-to-assign-variables"></a><a href="#how-to-assign-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Assign Variables?</h2>
 <p>The variables can be assigned values using <strong>leftward</strong>, <strong>rightward</strong> and <strong>equal</strong> to operator.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># Assignment using equal operator</span>
@@ -108,7 +108,7 @@ var_logic <span class="token operator">&lt;-</span> <span class="token boolean">
 <span class="token comment"># Assignment using leftward operator</span>
 c<span class="token punctuation">(</span><span class="token string">"Rajesh"</span><span class="token punctuation">,</span><span class="token string">"Detroja"</span><span class="token punctuation">)</span> <span class="token operator">-></span> var_str
 </code></pre>
-<p>The values of the variables can be printed using <strong><code>print()</code></strong> or <strong><code>cat()</code></strong> functions.</p>
+<p>The values of the variables can be printed using <code>print()</code> or <code>cat()</code> functions.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># printing using `print()` function</span>
 print<span class="token punctuation">(</span>var_num<span class="token punctuation">)</span>
 print<span class="token punctuation">(</span>var_logic<span class="token punctuation">)</span>
@@ -119,7 +119,7 @@ print<span class="token punctuation">(</span>var_str<span class="token punctuati
 <span class="token boolean">TRUE</span>
 <span class="token string">"Rajesh"</span> <span class="token string">"Detroja"</span>
 </code></pre>
-<p>The <strong><code>cat()</code></strong> function can be used to concatenate and print things together.</p>
+<p>The <code>cat()</code> function can be used to concatenate and print things together.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># printing using `cat()` function</span>
 cat<span class="token punctuation">(</span><span class="token string">"The values in `var_num` is:"</span><span class="token punctuation">,</span> var_num<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 cat<span class="token punctuation">(</span><span class="token string">"The values in `var_logic` is:"</span><span class="token punctuation">,</span> var_logic<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
@@ -130,11 +130,10 @@ cat<span class="token punctuation">(</span><span class="token string">"The value
 The values <span class="token keyword">in</span> `var_logic` is<span class="token operator">:</span> <span class="token boolean">TRUE</span>
 The values <span class="token keyword">in</span> `var_str` is<span class="token operator">:</span> Rajesh Detroja
 </code></pre>
-<p><u><strong>Note:</strong></u> Character <strong><code>\n</code></strong> is used to <strong>print a new line</strong> after the output.</p>
+<p><u><strong>Note:</strong></u> Character <code>\n</code> is used to <strong>print a new line</strong> after the output.</p>
 <h2><a class="anchor" aria-hidden="true" id="how-to-assign-data-type-of-variable"></a><a href="#how-to-assign-data-type-of-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Assign Data Type of Variable?</h2>
 <p>As said <a href="data-types#what-is-the-data-types-in-r"><strong>earlier</strong></a>, In R programming, <strong>data type of variable</strong> assigned by the <strong>data type of R-Object</strong>. If <em>data type of R-Object</em> changes then <em>data type of variable</em> changes too.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># assigning data type to variables</span>
-
 var_data_type <span class="token operator">&lt;-</span> <span class="token string">"Rajesh Detroja"</span>
 cat<span class="token punctuation">(</span><span class="token string">"The class of `var_data_type` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_data_type<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 
@@ -154,21 +153,21 @@ Now<span class="token punctuation">,</span> The class of `var_data_type` is<span
 Now<span class="token punctuation">,</span> The class of `var_data_type` is<span class="token operator">:</span>  logical
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="how-to-make-list-of-current-variables"></a><a href="#how-to-make-list-of-current-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Make List of Current Variables</h2>
-<p><strong><code>ls()</code></strong> function can be used to list all the available variable in current environment.</p>
+<p><code>ls()</code> function can be used to list all the available variable in current environment.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># make list of all the available variable in current environment</span>
 print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
 </code></pre>
-<p>Moreover, <strong><code>ls()</code></strong> function also accept patterns to match the variable names.</p>
+<p>Moreover, <code>ls()</code> function also accept patterns to match the variable names.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># make list of all the available variable in current environment using pattern</span>
 print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"type"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"var_data_type"</span>
 </code></pre>
-<p>The variable starting with <strong><code>dot(.)</code></strong> are hidden and can be listed using <strong>all.name = TRUE</strong> arguments to <strong><code>ls()</code></strong> function.</p>
+<p>The variable starting with <code>dot(.)</code> are hidden and can be listed using <code>all.name = TRUE</code> arguments to <code>ls()</code> function.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating a hidden variable</span>
 .var_hidden <span class="token operator">&lt;-</span> <span class="token string">"Hello World!"</span>
 
@@ -189,7 +188,7 @@ print<span class="token punctuation">(</span>ls<span class="token punctuation">(
 <span class="token string">".var_hidden"</span> <span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="how-to-delete-variable"></a><a href="#how-to-delete-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Delete Variable?</h2>
-<p><strong><code>rm()</code></strong> function can be used to delete a variable.</p>
+<p><code>rm()</code> function can be used to delete a variable.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># deleting the variable `.var_hidden`</span>
 rm<span class="token punctuation">(</span>.var_hidden<span class="token punctuation">)</span>
 
@@ -206,7 +205,7 @@ print<span class="token punctuation">(</span>ls<span class="token punctuation">(
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
 </code></pre>
-<p>All the variables in current environment can be deleted by using <strong><code>rm()</code></strong> and <strong><code>ls()</code></strong> functions together.</p>
+<p>All the variables in current environment can be deleted by using <code>rm()</code> and <code>ls()</code> functions together.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># deleting all the variables in current environment</span>
 rm<span class="token punctuation">(</span>list <span class="token operator">=</span> ls<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
@@ -216,6 +215,8 @@ print<span class="token punctuation">(</span>ls<span class="token punctuation">(
 <p>produces:</p>
 <pre><code class="hljs css language-r">character<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
 </code></pre>
+<h4><a class="anchor" aria-hidden="true" id="udownloadu"></a><a href="#udownloadu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><u>download</u></h4>
+<p><a href="https://github.com/Rajesh-Detroja/R/blob/master/getting_started/variables.R"><code>variables.R</code></a></p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/home/docs/R/getting_started/data-types"><span class="arrow-prev">← </span><span>Data Types</span></a><a class="docs-next button" href="/home/docs/R/getting_started/operators"><span>Operators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-the-variables-in-r">What is the Variables in R?</a></li><li><a href="#what-is-reserved-words">What is Reserved Words?</a></li><li><a href="#how-to-assign-variables">How to Assign Variables?</a></li><li><a href="#how-to-assign-data-type-of-variable">How to Assign Data Type of Variable?</a></li><li><a href="#how-to-make-list-of-current-variables">How to Make List of Current Variables</a></li><li><a href="#how-to-delete-variable">How to Delete Variable?</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 Rajesh Detroja</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.fbAsyncInit = function() {FB.init({appId:'351771359141773',xfbml:true,version:'v2.7'});};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js';fjs.parentNode.insertBefore(js, fjs);}(document, 'script','facebook-jssdk'));
                 </script><script>
                 document.addEventListener('keyup', function(e) {
