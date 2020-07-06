@@ -91,7 +91,24 @@
 ?reserved
 </code></pre>
 <p>Where, <code>if</code>, <code>else</code>, <code>repeat</code>, <code>while</code>, <code>function</code>, <code>for</code>, <code>in</code>, <code>next</code> and <code>break</code> are used for conditions, loops and user defined functions.</p>
-<p><code>TRUE</code> and <code>FALSE</code> are the logical constants.</p>
+<p><code>TRUE</code> and <code>FALSE</code> are the logical constants in R.</p>
+<blockquote>
+<p>R is a case sensitive language, Which mean that <code>TRUE</code> and <code>True</code> are not the same.</p>
+</blockquote>
+<p>Where, the <code>TRUE</code> is a reserved word and <code>True</code> can be used as a variable name.</p>
+<pre><code class="hljs css language-r"><span class="token comment"># `TRUE` vs `True` as a variable name</span>
+<span class="token boolean">TRUE</span> <span class="token operator">&lt;-</span> <span class="token string">"Hello, World!"</span>
+print<span class="token punctuation">(</span><span class="token boolean">TRUE</span><span class="token punctuation">)</span>
+
+True <span class="token operator">&lt;-</span> <span class="token string">"Rajesh Detroja"</span>
+print<span class="token punctuation">(</span>True<span class="token punctuation">)</span>
+</code></pre>
+<p>produces:</p>
+<pre><code class="hljs css language-r">Error <span class="token keyword">in</span> <span class="token boolean">TRUE</span> <span class="token operator">&lt;-</span> <span class="token string">"Hello, World!"</span> <span class="token operator">:</span>
+  invalid <span class="token punctuation">(</span>do_set<span class="token punctuation">)</span> left<span class="token operator">-</span>hand side to assignment
+<span class="token boolean">TRUE</span>
+<span class="token string">"Rajesh Detroja"</span>
+</code></pre>
 <p><code>NULL</code> represents the absence of a value or an undefined value.</p>
 <p><code>Inf</code> is for “Infinity”, for example when <strong>1</strong> is divided by <strong>0</strong></p>
 <p><code>NaN</code> is for “Not a Number”, for example when <strong>0</strong> is divided by <strong>0</strong></p>
