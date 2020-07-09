@@ -117,19 +117,19 @@ print<span class="token punctuation">(</span>True<span class="token punctuation"
 <h2><a class="anchor" aria-hidden="true" id="how-to-assign-variables"></a><a href="#how-to-assign-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Assign Variables?</h2>
 <p>The variables can be assigned values using <strong>leftward</strong>, <strong>rightward</strong> and <strong>equal</strong> to operator.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># Assignment using equal operator</span>
-var_num <span class="token operator">=</span> c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2.5</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span>
+var_x <span class="token operator">=</span> c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2.5</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">)</span>
 
 <span class="token comment"># Assignment using rightward operator</span>
-var_logic <span class="token operator">&lt;-</span> <span class="token boolean">TRUE</span>
+var_y <span class="token operator">&lt;-</span> <span class="token boolean">TRUE</span>
 
 <span class="token comment"># Assignment using leftward operator</span>
-c<span class="token punctuation">(</span><span class="token string">"Rajesh"</span><span class="token punctuation">,</span><span class="token string">"Detroja"</span><span class="token punctuation">)</span> <span class="token operator">-></span> var_str
+c<span class="token punctuation">(</span><span class="token string">"Rajesh"</span><span class="token punctuation">,</span><span class="token string">"Detroja"</span><span class="token punctuation">)</span> <span class="token operator">-></span> var_z
 </code></pre>
 <p>The values of the variables can be printed using <code>print()</code> or <code>cat()</code> functions.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># printing using `print()` function</span>
-print<span class="token punctuation">(</span>var_num<span class="token punctuation">)</span>
-print<span class="token punctuation">(</span>var_logic<span class="token punctuation">)</span>
-print<span class="token punctuation">(</span>var_str<span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_y<span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_z<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">0.0</span> <span class="token number">2.5</span> <span class="token number">8.0</span> <span class="token number">10.0</span> <span class="token number">200.0</span>
@@ -138,36 +138,36 @@ print<span class="token punctuation">(</span>var_str<span class="token punctuati
 </code></pre>
 <p>The <code>cat()</code> function can be used to concatenate and print things together.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># printing using `cat()` function</span>
-cat<span class="token punctuation">(</span><span class="token string">"The values in `var_num` is:"</span><span class="token punctuation">,</span> var_num<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
-cat<span class="token punctuation">(</span><span class="token string">"The values in `var_logic` is:"</span><span class="token punctuation">,</span> var_logic<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
-cat<span class="token punctuation">(</span><span class="token string">"The values in `var_str` is:"</span><span class="token punctuation">,</span> var_str<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+cat<span class="token punctuation">(</span><span class="token string">"The values in `var_x` is:"</span><span class="token punctuation">,</span> var_x<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+cat<span class="token punctuation">(</span><span class="token string">"The values in `var_y` is:"</span><span class="token punctuation">,</span> var_y<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+cat<span class="token punctuation">(</span><span class="token string">"The values in `var_z` is:"</span><span class="token punctuation">,</span> var_z<span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs css language-r">The values <span class="token keyword">in</span> `var_num` is<span class="token operator">:</span> <span class="token number">0</span> <span class="token number">2.5</span> <span class="token number">8</span> <span class="token number">10</span> <span class="token number">200</span>
-The values <span class="token keyword">in</span> `var_logic` is<span class="token operator">:</span> <span class="token boolean">TRUE</span>
-The values <span class="token keyword">in</span> `var_str` is<span class="token operator">:</span> Rajesh Detroja
+<pre><code class="hljs css language-r">The values <span class="token keyword">in</span> `var_x` is<span class="token operator">:</span> <span class="token number">0</span> <span class="token number">2.5</span> <span class="token number">8</span> <span class="token number">10</span> <span class="token number">200</span>
+The values <span class="token keyword">in</span> `var_y` is<span class="token operator">:</span> <span class="token boolean">TRUE</span>
+The values <span class="token keyword">in</span> `var_z` is<span class="token operator">:</span> Rajesh Detroja
 </code></pre>
 <p><u><strong>Note:</strong></u> Character <code>\n</code> is used to <strong>print a new line</strong> after the output.</p>
 <h2><a class="anchor" aria-hidden="true" id="how-to-assign-data-type-of-variable"></a><a href="#how-to-assign-data-type-of-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Assign Data Type of Variable?</h2>
 <p>As said <a href="data-types#what-is-the-data-types-in-r"><strong>earlier</strong></a>, In R programming, <strong>data type of variable</strong> assigned by the <strong>data type of R-Object</strong>. If <em>data type of R-Object</em> changes then <em>data type of variable</em> changes too.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># assigning data type to variables</span>
-var_data_type <span class="token operator">&lt;-</span> <span class="token string">"Rajesh Detroja"</span>
-cat<span class="token punctuation">(</span><span class="token string">"The class of `var_data_type` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_data_type<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+var_x1 <span class="token operator">&lt;-</span> <span class="token string">"Rajesh Detroja"</span>
+cat<span class="token punctuation">(</span><span class="token string">"The class of `var_x1` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_x1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 
-var_data_type <span class="token operator">&lt;-</span> <span class="token number">3.14</span>
-cat<span class="token punctuation">(</span><span class="token string">"Now, the class of `var_data_type` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_data_type<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+var_x2 <span class="token operator">&lt;-</span> <span class="token number">3.14</span>
+cat<span class="token punctuation">(</span><span class="token string">"Now, the class of `var_x2` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_x2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 
-var_data_type <span class="token operator">&lt;-</span> <span class="token number">3L</span>
-cat<span class="token punctuation">(</span><span class="token string">"Now, The class of `var_data_type` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_data_type<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+var_x3 <span class="token operator">&lt;-</span> <span class="token number">3L</span>
+cat<span class="token punctuation">(</span><span class="token string">"Now, The class of `var_x3` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_x3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 
-var_data_type <span class="token operator">&lt;-</span> <span class="token boolean">FALSE</span>
-cat<span class="token punctuation">(</span><span class="token string">"Now, The class of `var_data_type` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_data_type<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
+var_x4 <span class="token operator">&lt;-</span> <span class="token boolean">FALSE</span>
+cat<span class="token punctuation">(</span><span class="token string">"Now, The class of `var_x4` is: "</span><span class="token punctuation">,</span> class<span class="token punctuation">(</span>var_x4<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"\n"</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs css language-r">The class of `var_data_type` is<span class="token operator">:</span>  character
-Now<span class="token punctuation">,</span> the class of `var_data_type` is<span class="token operator">:</span>  numeric
-Now<span class="token punctuation">,</span> The class of `var_data_type` is<span class="token operator">:</span>  integer
-Now<span class="token punctuation">,</span> The class of `var_data_type` is<span class="token operator">:</span>  logical
+<pre><code class="hljs css language-r">The class of `var_x1` is<span class="token operator">:</span>  character
+Now<span class="token punctuation">,</span> the class of `var_x2` is<span class="token operator">:</span>  numeric
+Now<span class="token punctuation">,</span> The class of `var_x3` is<span class="token operator">:</span>  integer
+Now<span class="token punctuation">,</span> The class of `var_x4` is<span class="token operator">:</span>  logical
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="how-to-make-list-of-current-variables"></a><a href="#how-to-make-list-of-current-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Make List of Current Variables</h2>
 <p><code>ls()</code> function can be used to list all the available variable in current environment.</p>
@@ -175,52 +175,50 @@ Now<span class="token punctuation">,</span> The class of `var_data_type` is<span
 print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs css language-r"><span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
+<pre><code class="hljs css language-r"><span class="token string">"True"</span> <span class="token string">"var_x"</span> <span class="token string">"var_x1"</span> <span class="token string">"var_x2"</span> <span class="token string">"var_x3"</span> <span class="token string">"var_x4"</span> <span class="token string">"var_y"</span> <span class="token string">"var_z"</span>
 </code></pre>
 <p>Moreover, <code>ls()</code> function also accept patterns to match the variable names.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># make list of all the available variable in current environment using pattern</span>
-print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"type"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span>pattern <span class="token operator">=</span> <span class="token string">"var_x"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs css language-r"><span class="token string">"var_data_type"</span>
+<pre><code class="hljs css language-r"><span class="token string">"var_x"</span> <span class="token string">"var_x1"</span> <span class="token string">"var_x2"</span> <span class="token string">"var_x3"</span> <span class="token string">"var_x4"</span>
 </code></pre>
 <p>The variable starting with <code>dot(.)</code> are hidden and can be listed using <code>all.name = TRUE</code> arguments to <code>ls()</code> function.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating a hidden variable</span>
-.var_hidden <span class="token operator">&lt;-</span> <span class="token string">"Hello World!"</span>
+.var_xy <span class="token operator">&lt;-</span> <span class="token string">"Hello World!"</span>
 
 <span class="token comment"># checking the class of a hidden variable</span>
-print<span class="token punctuation">(</span>class<span class="token punctuation">(</span>.var_hidden<span class="token punctuation">)</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>class<span class="token punctuation">(</span>.var_xy<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 <span class="token comment"># listing all the variables</span>
 print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-cat<span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span>
 
 <span class="token comment"># listing all the variables including hidden variable</span>
 print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span>all.name <span class="token operator">=</span> <span class="token boolean">TRUE</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"character"</span>
-<span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
-
-<span class="token string">".var_hidden"</span> <span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
+<span class="token string">"True"</span> <span class="token string">"var_x"</span> <span class="token string">"var_x1"</span> <span class="token string">"var_x2"</span> <span class="token string">"var_x3"</span> <span class="token string">"var_x4"</span> <span class="token string">"var_y"</span> <span class="token string">"var_z"</span>
+<span class="token string">".var_xy"</span> <span class="token string">"True"</span> <span class="token string">"var_x"</span> <span class="token string">"var_x1"</span> <span class="token string">"var_x2"</span> <span class="token string">"var_x3"</span> <span class="token string">"var_x4"</span> <span class="token string">"var_y"</span> <span class="token string">"var_z"</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="how-to-delete-variable"></a><a href="#how-to-delete-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Delete Variable?</h2>
 <p><code>rm()</code> function can be used to delete a variable.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># deleting the variable `.var_hidden`</span>
-rm<span class="token punctuation">(</span>.var_hidden<span class="token punctuation">)</span>
+rm<span class="token punctuation">(</span>.var_xy<span class="token punctuation">)</span>
 
 <span class="token comment"># print deleted variable `.var_hidden`</span>
-print<span class="token punctuation">(</span>.var_hidden<span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>.var_xy<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs css language-r">Error <span class="token keyword">in</span> print<span class="token punctuation">(</span>.var_hidden<span class="token punctuation">)</span> <span class="token operator">:</span> object <span class="token string">'.var_hidden'</span> not found
+<pre><code class="hljs css language-r">Error <span class="token keyword">in</span> print<span class="token punctuation">(</span>.var_xy<span class="token punctuation">)</span> <span class="token operator">:</span> object <span class="token string">'.var_xy'</span> not found
 </code></pre>
-<p><strong>.var_hidden</strong> variable is deleted therefore it is not accessible.</p>
+<p><strong>.var_xy</strong> variable is deleted therefore it is not accessible.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># listing all the remaining variables</span>
 print<span class="token punctuation">(</span>ls<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs css language-r"><span class="token string">"var_data_type"</span> <span class="token string">"var_logic"</span> <span class="token string">"var_num"</span> <span class="token string">"var_str"</span>
+<pre><code class="hljs css language-r"><span class="token string">"True"</span> <span class="token string">"var_x"</span> <span class="token string">"var_x1"</span> <span class="token string">"var_x2"</span> <span class="token string">"var_x3"</span> <span class="token string">"var_x4"</span> <span class="token string">"var_y"</span> <span class="token string">"var_z"</span>
 </code></pre>
 <p>All the variables in current environment can be deleted by using <code>rm()</code> and <code>ls()</code> functions together.</p>
 <pre><code class="hljs css language-r"><span class="token comment"># deleting all the variables in current environment</span>

@@ -72,20 +72,26 @@
 <p>A <strong>vector</strong> object can only contain <strong>data type of the same class</strong>. Except, <strong><em>List</em></strong>.</p>
 </blockquote>
 <p>Empty vector can be created with the <code>vector()</code> function.</p>
-<pre><code class="hljs css language-r">vec <span class="token operator">&lt;-</span> vector<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre><code class="hljs css language-r"><span class="token comment"># creating a empty with `vector()` function</span>
+var_vec <span class="token operator">&lt;-</span> vector<span class="token punctuation">(</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_vec<span class="token punctuation">)</span>
 </code></pre>
-<p>Here, <code>vec</code> is a <strong>variable</strong> and <code>vector()</code> is a function to create a <strong>vector</strong> object.</p>
+<p>produces:</p>
+<pre><code class="hljs css language-r">logical<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Here, <code>var_vec</code> is a <strong>variable</strong> and <code>vector()</code> is a function to create a <strong>vector</strong> object.</p>
+<p>The results <code>logical(0)</code> means the vector is empty without any values stored inside.</p>
 <h2><a class="anchor" aria-hidden="true" id="how-many-data-types-there-in-r"></a><a href="#how-many-data-types-there-in-r" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How many Data Types there in R?</h2>
 <p>There are <strong>6</strong> basic <strong>data types</strong> or <strong>atomic classes</strong> of objects:</p>
 <h3><a class="anchor" aria-hidden="true" id="1-numeric"></a><a href="#1-numeric" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>1. Numeric</strong></h3>
 <p>The most common data type in R is <strong>numeric</strong>. A variable or numeric series with or without decimals can be stored as numeric data.</p>
 <p><u><strong>Numeric series without decimals</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># numeric series without decimals</span>
-num_ser <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span>
-num_ser
+var_x <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>num_ser<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">2</span> <span class="token number">6</span> <span class="token number">8</span>
@@ -93,11 +99,11 @@ class<span class="token punctuation">(</span>num_ser<span class="token punctuati
 </code></pre>
 <p><u><strong>Numeric series with decimals</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># numeric series with decimals</span>
-num_ser_dec <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">2.2</span><span class="token punctuation">,</span> <span class="token number">6.4</span><span class="token punctuation">,</span> <span class="token number">8.6</span><span class="token punctuation">)</span>
-num_ser_dec
+var_x <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">2.2</span><span class="token punctuation">,</span> <span class="token number">6.4</span><span class="token punctuation">,</span> <span class="token number">8.6</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>num_ser_dec<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">2.2</span> <span class="token number">6.4</span> <span class="token number">8.6</span>
@@ -111,11 +117,11 @@ class<span class="token punctuation">(</span>num_ser_dec<span class="token punct
 <p>Integer variable can be created with function <code>as.integer()</code></p>
 <p><u><strong>Creating an integer variable</strong> </u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating integer variable</span>
-int_var <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
-int_var
+var_x <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>int_var<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">2</span>
@@ -123,11 +129,11 @@ class<span class="token punctuation">(</span>int_var<span class="token punctuati
 </code></pre>
 <p><u><strong>Creating an integer variable by appending an L suffix</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating an integer variable by appending an L suffix</span>
-int_var_L <span class="token operator">&lt;-</span> <span class="token number">2L</span>
-int_var_L
+var_x <span class="token operator">&lt;-</span> <span class="token number">2L</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>int_var_L<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">2</span>
@@ -138,11 +144,11 @@ class<span class="token punctuation">(</span>int_var_L<span class="token punctua
 </blockquote>
 <p><u><strong>Coerce a numeric decimals value into an integer variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># coerce a numeric decimals value into an integer variable</span>
-int_var_num <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token number">2.5</span><span class="token punctuation">)</span>
-int_var_num
+var_x <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token number">2.5</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>int_var_num<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">2</span>
@@ -150,11 +156,11 @@ class<span class="token punctuation">(</span>int_var_num<span class="token punct
 </code></pre>
 <p><u><strong>Coerce a string of decimal value into an integer variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># coerce a string of decimal value into an integer variable</span>
-int_var_str <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token string">"2.5"</span><span class="token punctuation">)</span>
-int_var_str
+var_x <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token string">"2.5"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>int_var_str<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">2</span>
@@ -162,11 +168,11 @@ class<span class="token punctuation">(</span>int_var_str<span class="token punct
 </code></pre>
 <p><u><strong>Coerce a string of non-decimal value into an integer variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># coerce a string of non-decimal value into an integer variable</span>
-int_var_nd_str <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token string">"Rajesh"</span><span class="token punctuation">)</span>
-int_var_nd_str
+var_x <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token string">"Rajesh"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>int_var_nd_str<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r">Warning message<span class="token operator">:</span>
@@ -176,15 +182,15 @@ NAs introduced by coercion
 </code></pre>
 <p><u><strong>Logical values into an integer variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># Logical values into an integer variable</span>
-int_var_true <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token boolean">TRUE</span><span class="token punctuation">)</span>
-int_var_true
+var_x <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token boolean">TRUE</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
-int_var_false <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token boolean">FALSE</span><span class="token punctuation">)</span>
-int_var_false
+var_y <span class="token operator">&lt;-</span> as.integer<span class="token punctuation">(</span><span class="token boolean">FALSE</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_y<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>int_var_true<span class="token punctuation">)</span>
-class<span class="token punctuation">(</span>int_var_false<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_y<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">1</span>
@@ -196,11 +202,11 @@ class<span class="token punctuation">(</span>int_var_false<span class="token pun
 <p><strong>Complex</strong> data types in R is defined by an imaginary number, or i.</p>
 <p><u><strong>Creating an complex variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating an complex variable</span>
-comp_var <span class="token operator">&lt;-</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">0i</span>
-comp_var
+var_x <span class="token operator">&lt;-</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">0i</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>comp_var<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span>
@@ -208,11 +214,11 @@ class<span class="token punctuation">(</span>comp_var<span class="token punctuat
 </code></pre>
 <p><u><strong>Creating an complex variable with <code>c()</code> function</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating an complex variable with `c()` function</span>
-comp_var_c <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">+</span><span class="token number">4i</span><span class="token punctuation">)</span>
-comp_var_c
+var_x <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">+</span><span class="token number">4i</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>comp_var_c<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">1</span><span class="token operator">+</span><span class="token number">0i</span> <span class="token number">2</span><span class="token operator">+</span><span class="token number">4i</span>
@@ -222,11 +228,11 @@ class<span class="token punctuation">(</span>comp_var_c<span class="token punctu
 <p>The data type <strong>character</strong> is used when storing <strong>string</strong> or <strong>text</strong> by using <code>&quot;&quot;</code></p>
 <p><u><strong>Creating an character variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating an character variable</span>
-char_var <span class="token operator">&lt;-</span> <span class="token string">"This is a string"</span>
-char_var
+var_x <span class="token operator">&lt;-</span> <span class="token string">"This is a string"</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>char_var<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"This is a string"</span>
@@ -234,11 +240,11 @@ class<span class="token punctuation">(</span>char_var<span class="token punctuat
 </code></pre>
 <p><u><strong>Everything inside <code>&quot;&quot;</code> will be considered as character</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># everything inside `""` will be considered as character</span>
-char_var_num <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"3.14"</span><span class="token punctuation">)</span>
-char_var_num
+var_x <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"3.14"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>char_var<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"3.14"</span>
@@ -246,11 +252,11 @@ class<span class="token punctuation">(</span>char_var<span class="token punctuat
 </code></pre>
 <p><u><strong>Character + Numbers produces a whole character variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># character + numbers produces a whole character variable</span>
-char_var_c_n <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"string"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
-char_var_c_n
+var_x <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token string">"string"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3.14</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>char_var<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"string"</span> <span class="token string">"2"</span> <span class="token string">"3.14"</span> <span class="token string">"6"</span>
@@ -258,22 +264,22 @@ class<span class="token punctuation">(</span>char_var<span class="token punctuat
 </code></pre>
 <p><u><strong>Space within <code>&quot;&quot;</code> makes a different character variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># space within `""` makes a different character variable</span>
-char_var_space <span class="token operator">&lt;-</span> <span class="token string">"string "</span>
-char_var_no_space <span class="token operator">&lt;-</span> <span class="token string">"string"</span>
+var_x <span class="token operator">&lt;-</span> <span class="token string">"string "</span>
+var_y <span class="token operator">&lt;-</span> <span class="token string">"string"</span>
 
 <span class="token comment"># `char_var_space` is equal to `char_var_no_space`?</span>
-char_var_space <span class="token operator">==</span> char_var_no_space
+var_x <span class="token operator">==</span> var_y
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token boolean">FALSE</span>
 </code></pre>
 <p><u><strong>Creating a character variable with <code>as.character()</code> function</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating a character variable with `as.character()` function</span>
-char_var_as <span class="token operator">&lt;-</span> as.character<span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>
-char_var_as
+var_x <span class="token operator">&lt;-</span> as.character<span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>char_var_as<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"3.14"</span>
@@ -281,34 +287,34 @@ class<span class="token punctuation">(</span>char_var_as<span class="token punct
 </code></pre>
 <p><u><strong>Two character variables can be concatenated with the <code>paste()</code> function</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># two character variables can be concatenated with the `paste()` function</span>
-char_fname <span class="token operator">&lt;-</span> <span class="token string">"Rajesh"</span>
-char_lname <span class="token operator">&lt;-</span> <span class="token string">"Detroja"</span>
+var_x <span class="token operator">&lt;-</span> <span class="token string">"Rajesh"</span>
+var_y <span class="token operator">&lt;-</span> <span class="token string">"Detroja"</span>
 
-paste<span class="token punctuation">(</span>char_fname<span class="token punctuation">,</span> char_lname<span class="token punctuation">)</span>
+paste<span class="token punctuation">(</span>var_x<span class="token punctuation">,</span> var_y<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"Rajesh Detroja"</span>
 </code></pre>
 <p><u><strong>Creating a character variable with <code>sprintf()</code> function</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating a character variable with `sprintf()` function</span>
-char_var_sprintf <span class="token operator">&lt;-</span> sprintf<span class="token punctuation">(</span><span class="token string">"Computer of %s has %dTb of space!"</span><span class="token punctuation">,</span> <span class="token string">"Rajesh"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-char_var_sprintf
+var_x <span class="token operator">&lt;-</span> sprintf<span class="token punctuation">(</span><span class="token string">"Computer of %s has %dTb of space!"</span><span class="token punctuation">,</span> <span class="token string">"Rajesh"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"Computer of Rajesh has 1Tb of space!"</span>
 </code></pre>
 <p><u><strong>Applying a <code>substr()</code> function on character variable to extract sub-string</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># applying a `substr()` function on character variable to extract sub-string</span>
-char_var_substr <span class="token operator">&lt;-</span> substr<span class="token punctuation">(</span><span class="token string">"I am Rajesh Detroja!"</span><span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> stop<span class="token operator">=</span><span class="token number">19</span><span class="token punctuation">)</span>
-char_var_substr
+var_x <span class="token operator">&lt;-</span> substr<span class="token punctuation">(</span><span class="token string">"I am Rajesh Detroja!"</span><span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> stop<span class="token operator">=</span><span class="token number">19</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"Rajesh Detroja"</span>
 </code></pre>
 <p><u><strong>Replacing first occurrence of word &quot;Detroja&quot; with &quot;Patel&quot; by using 'sub()' function</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># replacing first occurrence of word "Detroja" with "Patel" by using 'sub()' function</span>
-char_var_sub <span class="token operator">&lt;-</span> <span class="token string">"I am Rajesh Detroja"</span>
-sub<span class="token punctuation">(</span><span class="token string">"Detroja"</span><span class="token punctuation">,</span><span class="token string">"Patel"</span><span class="token punctuation">,</span> char_var_sub<span class="token punctuation">)</span>
+var_x <span class="token operator">&lt;-</span> <span class="token string">"I am Rajesh Detroja"</span>
+sub<span class="token punctuation">(</span><span class="token string">"Detroja"</span><span class="token punctuation">,</span><span class="token string">"Patel"</span><span class="token punctuation">,</span> var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token string">"I am Rajesh Patel"</span>
@@ -317,14 +323,15 @@ sub<span class="token punctuation">(</span><span class="token string">"Detroja"<
 <p>A <strong>logical</strong> data type is a data type with only two values; <code>TRUE</code> or <code>FALSE</code></p>
 <p><u><strong>Creating a logical variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># creating a logical variable</span>
-logic_var_true <span class="token operator">&lt;-</span> <span class="token boolean">TRUE</span>
-logic_var_false <span class="token operator">&lt;-</span> <span class="token boolean">FALSE</span>
-logic_var_true
-logic_var_false
+var_x <span class="token operator">&lt;-</span> <span class="token boolean">TRUE</span>
+var_y <span class="token operator">&lt;-</span> <span class="token boolean">FALSE</span>
+
+print<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>var_y<span class="token punctuation">)</span>
 
 <span class="token comment"># checking data type of variable with "class" function</span>
-class<span class="token punctuation">(</span>logic_var_true<span class="token punctuation">)</span>
-class<span class="token punctuation">(</span>logic_var_false<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
+class<span class="token punctuation">(</span>var_y<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token boolean">TRUE</span>
@@ -334,15 +341,15 @@ class<span class="token punctuation">(</span>logic_var_false<span class="token p
 </code></pre>
 <p><u><strong>Comparing numeric variable</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># comparing numeric variable</span>
-num_var_1 <span class="token operator">&lt;-</span> <span class="token number">10</span>
-num_var_2 <span class="token operator">&lt;-</span> <span class="token number">20</span>
-num_var_3 <span class="token operator">&lt;-</span> <span class="token number">30</span>
+var_x <span class="token operator">&lt;-</span> <span class="token number">10</span>
+var_y <span class="token operator">&lt;-</span> <span class="token number">20</span>
+var_z <span class="token operator">&lt;-</span> <span class="token number">30</span>
 
-<span class="token comment"># is `num_var_1` and `num_var_2` is equal?</span>
-num_var_1 <span class="token operator">==</span> num_var_2
+<span class="token comment"># is `var_x` and `var_y` is equal?</span>
+var_x <span class="token operator">==</span> var_y
 
-<span class="token comment">## is `num_var_3 - num_var_2` is equal to `num_var_1`</span>
-<span class="token punctuation">(</span>num_var_3 <span class="token operator">-</span> num_var_2<span class="token punctuation">)</span> <span class="token operator">==</span> num_var_1
+<span class="token comment">## is `var_z - var_y` is equal to `var_x`</span>
+<span class="token punctuation">(</span>var_z <span class="token operator">-</span> var_y<span class="token punctuation">)</span> <span class="token operator">==</span> var_x
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token boolean">FALSE</span>
@@ -352,8 +359,8 @@ num_var_1 <span class="token operator">==</span> num_var_2
 <p>There is also <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/raw"><strong>raw</strong></a> data type in R, but they are not commonly used directly in data analysis.</p>
 <p><u><strong>Converting character variable to raw</strong></u></p>
 <pre><code class="hljs css language-r"><span class="token comment"># converting character variable to raw</span>
-char_var_raj <span class="token operator">&lt;-</span> <span class="token string">"Rajesh"</span>
-charToRaw<span class="token punctuation">(</span>char_var_raj<span class="token punctuation">)</span>
+var_x <span class="token operator">&lt;-</span> <span class="token string">"Rajesh"</span>
+charToRaw<span class="token punctuation">(</span>var_x<span class="token punctuation">)</span>
 </code></pre>
 <p>produces:</p>
 <pre><code class="hljs css language-r"><span class="token number">52</span> <span class="token number">61</span> <span class="token number">6</span>a <span class="token number">65</span> <span class="token number">73</span> <span class="token number">68</span>
