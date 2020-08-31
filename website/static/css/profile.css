@@ -1,0 +1,91 @@
+/* biography round image */
+
+.bio-photo {
+    text-align: center;
+}
+
+.bio-photo img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding: 5px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}
+
+
+/* main body - Header settings */
+h1 {
+    border-bottom: 4px solid #CC9752;
+}
+
+h2 {
+    border-bottom: 3px solid #ECECEC;
+}
+
+h3 {
+    border-bottom: 2px solid #ECECEC;
+}
+
+/* code syntax (` `) settings */
+code {
+    color: #c7254e;
+    background-color: #f5f2f0;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 16px;
+}
+
+/* contact form css*/
+/* Style inputs with type="text", select elements and textareas */
+.cnt_input {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1.5px solid #0F3B5F; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: 'verdana', 'Arial', 'sans serif';
+}
+
+/* When moving the mouse over the text area, change color */
+.cnt_input:hover {
+  background-color: #f1f6fd;
+}
+
+
+/* Style the submit button with a specific background color etc */
+.cnt_button {
+  background-color: white;
+  color: #0F3B5F;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  border: 1.5px solid #0F3B5F;
+  cursor: pointer;
+  font-family: 'verdana', 'Arial', 'sans serif';
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.cnt_button:hover {
+  background-color: #0F3B5F;
+  color: white;
+  font-family: 'verdana', 'Arial', 'sans serif';
+}
+
+/* Style Label */
+.cnt_lb{
+    font-weight: bold;
+    color: #0F3B5F;
+    font-family: 'verdana', 'Arial', 'sans serif';
+}
+
+.cnt_input::placeholder {
+  color: #F5AEAE;
+  font-family: 'verdana', 'Arial', 'sans serif';
+  font-size: 1em;
+  font-style: italic;
+}

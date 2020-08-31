@@ -1,0 +1,139 @@
+{
+  "docs": {
+    "Bash": ["bash/bash_1",
+             "bash/bash_2"],
+
+    "R": ["R/getting_started/intro",
+            {
+                "type": "subcategory",
+                "label": "Getting Started",
+                "ids": ["R/getting_started/intro",
+                        "R/getting_started/install",
+                        "R/getting_started/hello-world",
+                        "R/getting_started/comments",
+                        "R/getting_started/data-types",
+                        "R/getting_started/variables",
+                        "R/getting_started/operators",
+                        "R/getting_started/decision-making",
+                        "R/getting_started/loops",
+                        "R/getting_started/functions",
+                        "R/getting_started/strings",
+                        "R/getting_started/vectors",
+                        "R/getting_started/lists",
+                        "R/getting_started/matrices",
+                        "R/getting_started/arrays",
+                        "R/getting_started/factors",
+                        "R/getting_started/data_frames",
+                        "R/getting_started/packages",
+                        "R/getting_started/data_reshaping"
+                       ]
+            },
+            {
+                "type": "subcategory",
+                "label": "Data Interfaces",
+                "ids": ["R/data_interfaces/CSV_files",
+                        "R/data_interfaces/EXCEL_files",
+                        "R/data_interfaces/binary_files",
+                        "R/data_interfaces/XML_files",
+                        "R/data_interfaces/JSON_files",
+                        "R/data_interfaces/web_data",
+                        "R/data_interfaces/database"
+                       ]
+
+            },
+            {
+                "type": "subcategory",
+                "label": "Charts & Graphs",
+                "ids": ["R/charts_graphs/pie_charts",
+                        "R/charts_graphs/bar_charts",
+                        "R/charts_graphs/boxplots",
+                        "R/charts_graphs/histograms",
+                        "R/charts_graphs/line_graphs",
+                        "R/charts_graphs/scatterplots",
+                        "R/charts_graphs/venn_diagram"
+                       ]
+
+            }
+         ],
+
+    "Python": ["Python/getting_started/intro",
+                {
+                    "type": "subcategory",
+                    "label": "Getting Started",
+                    "ids": ["Python/getting_started/intro",
+                            "Python/getting_started/install",
+                            "Python/getting_started/hello_world",
+                            "Python/getting_started/variables",
+                            "Python/getting_started/operators",
+                            "Python/getting_started/decision_making",
+                            "Python/getting_started/loops",
+                            "Python/getting_started/numbers",
+                            "Python/getting_started/strings",
+                            "Python/getting_started/lists",
+                            "Python/getting_started/dictionary",
+                            "Python/getting_started/date_time",
+                            "Python/getting_started/functions",
+                            "Python/getting_started/exceptions"
+                           ]
+                }
+            ],
+
+    "NGS": ["NGS/getting_started/intro",
+                {
+                             "type": "subcategory",
+                             "label": "Getting Started",
+                             "ids": ["NGS/getting_started/intro"]
+                 }
+                       ],
+
+    "DNA-Seq": ["dna_seq/getting_started/intro",
+                     {
+                         "type": "subcategory",
+                         "label": "Getting Started",
+                         "ids": ["dna_seq/getting_started/intro"]
+                     }
+               ],
+
+    "RNA-Seq": ["rna_seq/getting_started/intro",
+                    {
+                        "type": "subcategory",
+                        "label": "Getting Started",
+                        "ids": ["rna_seq/getting_started/intro"]
+                    }
+               ],
+    "DL": ["DL/getting_started/intro",
+                               {
+                                   "type": "subcategory",
+                                   "label": "Getting Started",
+                                   "ids": ["DL/getting_started/intro"]
+                               }
+                      ],
+     "ML": ["ML/getting_started/intro",
+                                {
+                                    "type": "subcategory",
+                                    "label": "Getting Started",
+                                    "ids": ["ML/getting_started/intro"]
+                                }
+                        ],
+     "AI": ["AI/getting_started/intro",
+                                 {
+                                     "type": "subcategory",
+                                     "label": "Getting Started",
+                                     "ids": ["AI/getting_started/intro"]
+                                }
+                                ]
+  },
+
+  "docs-other": {
+    "Profile": [ "profile/about",
+                 "profile/exp",
+                 "profile/edu",
+                 "profile/skills",
+                 "profile/pub",
+                 "profile/org",
+                 "profile/lang",
+                 "profile/news",
+                 "profile/cont"
+             ]
+  }
+}

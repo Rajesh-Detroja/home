@@ -1,0 +1,4 @@
+1) Add `sprintf()` documentation
+2) Check the use of `<<-` operator
+3) Solve the issue of <sup></sup> and add to operators
+4) Learn about multiplication of matrix transpose
