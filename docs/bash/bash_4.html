@@ -68,8 +68,8 @@
 <span class="token function">ls</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs"><span class="hljs-keyword">bash </span> <span class="hljs-string">'bash folder'</span>   <span class="hljs-keyword">bash-folder </span>  <span class="hljs-keyword">bash.folder </span>  <span class="hljs-keyword">bash_folder
-</span></code></pre>
+<pre><code class="hljs css language-bash"><span class="token function">bash</span>  <span class="token string">'bash folder'</span>   bash-folder   bash.folder   bash_folder
+</code></pre>
 <p><strong><u>Note</u></strong>: Always use <code>\</code> regular expression to recognize <code>SPACE</code> in the folder name.</p>
 <pre><code class="hljs css language-bash"><span class="token comment"># make multiple parent folders using `mkdir`</span>
 <span class="token function">mkdir</span> -p test/test1/test_final
@@ -80,25 +80,25 @@
 <span class="token function">rm</span> -r bash<span class="token punctuation">\</span> folder/
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs">rm: <span class="hljs-builtin-name">remove</span> directory <span class="hljs-string">'bash folder/'</span>? y
+<pre><code class="hljs css language-bash">rm: remove directory <span class="token string">'bash folder/'</span>? y
 </code></pre>
 <pre><code class="hljs css language-bash"><span class="token comment"># remove multiple folders</span>
 <span class="token function">rm</span> -r bash_folder/ bash.folder/ bash-folder/
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs">rm: <span class="hljs-builtin-name">remove</span> directory <span class="hljs-string">'bash_folder/'</span>? y
-rm: <span class="hljs-builtin-name">remove</span> directory <span class="hljs-string">'bash.folder/'</span>? y
-rm: <span class="hljs-builtin-name">remove</span> directory <span class="hljs-string">'bash-folder/'</span>? y
+<pre><code class="hljs css language-bash">rm: remove directory <span class="token string">'bash_folder/'</span>? y
+rm: remove directory <span class="token string">'bash.folder/'</span>? y
+rm: remove directory <span class="token string">'bash-folder/'</span>? y
 </code></pre>
 <pre><code class="hljs css language-bash"><span class="token comment"># remove descendant directories using 'mkdir'</span>
 <span class="token function">rm</span> -r test/
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs">rm: descend <span class="hljs-keyword">into</span> <span class="hljs-built_in">directory</span> <span class="hljs-string">'test/'</span>? y
-rm: descend <span class="hljs-keyword">into</span> <span class="hljs-built_in">directory</span> <span class="hljs-string">'test/test1'</span>? y
-rm: remove <span class="hljs-built_in">directory</span> <span class="hljs-string">'test/test1/test_final'</span>? y
-rm: remove <span class="hljs-built_in">directory</span> <span class="hljs-string">'test/test1'</span>? y
-rm: remove <span class="hljs-built_in">directory</span> <span class="hljs-string">'test/'</span>? y
+<pre><code class="hljs css language-bash">rm: descend into directory <span class="token string">'test/'</span>? y
+rm: descend into directory <span class="token string">'test/test1'</span>? y
+rm: remove directory <span class="token string">'test/test1/test_final'</span>? y
+rm: remove directory <span class="token string">'test/test1'</span>? y
+rm: remove directory <span class="token string">'test/'</span>? y
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="touch"></a><a href="#touch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>touch</h2>
 <p><code>touch</code> command used to create a file</p>
@@ -107,14 +107,14 @@ rm: remove <span class="hljs-built_in">directory</span> <span class="hljs-string
 <span class="token function">ls</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs">bash  <span class="hljs-built_in">file</span>.txt
+<pre><code class="hljs css language-bash"><span class="token function">bash</span>  file.txt
 </code></pre>
 <pre><code class="hljs css language-bash"><span class="token comment"># create a multiple text files using `touch`</span>
 <span class="token function">touch</span> file-1.txt file_2.txt file.3.txt
 <span class="token function">ls</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs"><span class="hljs-selector-tag">bash</span>  <span class="hljs-selector-tag">file-1</span><span class="hljs-selector-class">.txt</span>  <span class="hljs-selector-tag">file</span><span class="hljs-selector-class">.3</span><span class="hljs-selector-class">.txt</span>  <span class="hljs-selector-tag">file</span><span class="hljs-selector-class">.txt</span>  <span class="hljs-selector-tag">file_2</span><span class="hljs-selector-class">.txt</span>
+<pre><code class="hljs css language-bash"><span class="token function">bash</span>  file-1.txt  file.3.txt  file.txt  file_2.txt
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="rm"></a><a href="#rm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rm</h2>
 <p><code>rm</code> command used to remove file(s)</p>
@@ -122,20 +122,20 @@ rm: remove <span class="hljs-built_in">directory</span> <span class="hljs-string
 <span class="token function">rm</span> file.txt
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs">rm: <span class="hljs-built_in">remove</span> regular <span class="hljs-built_in">empty</span> <span class="hljs-keyword">file</span> <span class="hljs-string">'file.txt'</span>? <span class="hljs-keyword">y</span>
+<pre><code class="hljs css language-bash">rm: remove regular empty <span class="token function">file</span> <span class="token string">'file.txt'</span>? y
 </code></pre>
 <pre><code class="hljs css language-bash"><span class="token comment"># remove multiple files using `rm` command</span>
 <span class="token function">rm</span> file-1.txt file_2.txt file.3.txt
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs">rm: <span class="hljs-built_in">remove</span> regular <span class="hljs-built_in">empty</span> <span class="hljs-keyword">file</span> <span class="hljs-string">'file-1.txt'</span>? <span class="hljs-keyword">y</span>
-rm: <span class="hljs-built_in">remove</span> regular <span class="hljs-built_in">empty</span> <span class="hljs-keyword">file</span> <span class="hljs-string">'file_2.txt'</span>? <span class="hljs-keyword">y</span>
-rm: <span class="hljs-built_in">remove</span> regular <span class="hljs-built_in">empty</span> <span class="hljs-keyword">file</span> <span class="hljs-string">'file.3.txt'</span>? n
+<pre><code class="hljs css language-bash">rm: remove regular empty <span class="token function">file</span> <span class="token string">'file-1.txt'</span>? y
+rm: remove regular empty <span class="token function">file</span> <span class="token string">'file_2.txt'</span>? y
+rm: remove regular empty <span class="token function">file</span> <span class="token string">'file.3.txt'</span>? n
 </code></pre>
 <pre><code class="hljs css language-bash"><span class="token function">ls</span>
 </code></pre>
 <p>produces:</p>
-<pre><code class="hljs"><span class="hljs-selector-tag">bash</span>  <span class="hljs-selector-tag">file</span><span class="hljs-selector-class">.3</span><span class="hljs-selector-class">.txt</span>
+<pre><code class="hljs css language-bash"><span class="token function">bash</span>  file.3.txt
 </code></pre>
 <p><strong><u>Note:</u></strong> Use <code>Alt + TAB</code> to change the window.</p>
 <h2><a class="anchor" aria-hidden="true" id="vi"></a><a href="#vi" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>vi</h2>
